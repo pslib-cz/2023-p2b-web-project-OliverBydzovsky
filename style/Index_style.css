@@ -1,3 +1,7 @@
+html {
+  font-family: italic;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: hsl(201, 94%, 80%);
@@ -35,20 +39,20 @@ body {
 }
 
 .uvod {
-  background-color: none;
+  display: flex;
+  justify-content: center;
   position: absolute;
-  margin-top: 3em;
+  margin-top: 2em;
   text-align: center;
 
 }
 
 .uvodni_text {
   font-size: 1.6em;
-  font-family:cursive;
   font-weight: 700;
-  margin: auto;
   text-align: center;
   background-color: none;
+  z-index: 0;
 
 }
 
@@ -71,11 +75,11 @@ body {
 }
 
 .produkty {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  justify-content: center;
   align-items: center;
   margin-top: -17em;
+  gap: 1em;
 }
 
 
@@ -86,9 +90,26 @@ body {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .produkt {
+    height: 32em;
+    width: 20em;
+  }
+  .uvodni_text {
+    text-align: center;
+  }
+  .uvod{
+    width: 100%;
+  }
+  .menu-items {
+    display: block;
+  }
 }
 
-
+@media only screen and (max-width: 1200px) {
+  .produkt {
+    margin-left: 5em;
+  }
+}
 .produkt {
     background-color: #c27638;
     height: 28em;
@@ -121,7 +142,7 @@ body {
   background-color: white; 
   color: black; 
   border: 2px solid hsl(195, 73%, 36%);
-  border-radius: 10px;
+  border-radius: 18px;
   width: 15em;
   height: 2.5em;
 }
@@ -256,17 +277,18 @@ body {
 }
 
 .navbar .menu-items {
-  margin-top: 4.2em;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.959);
+  display: none;
   height: 30em;
-  border-radius: 10px;
-  width: 90%;
+  border-radius: 30px;
+  width: 60%;
   align-items: center;
-  transform: translate(150%);
-  display: flex;
+  transform: translateX(200%) translateY(-10%);
+  justify-content: center;
   flex-direction: column;
   transition: transform 0.5s ease-in-out;
   justify-content: center;
+  background-color: white;
+  z-index: 1;
 }
 
 .navbar .menu-items li {
@@ -281,17 +303,14 @@ body {
 
 .logo {
   position: absolute;
-  left: 15px;
+  margin-left: 15px;
   margin-top: -7px;
 }
-
-.menu-items {
-  position: fixed;
-  margin-top: 5em;
-}
-
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
-  transform: translateX(0);
+  display: flex;
+  animation: nav-vyjizdi;
+  transform: translateX(70%) translateY(-10%);
+  z-index: 1;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
@@ -308,4 +327,13 @@ body {
 
     .nav-container input[type="checkbox"]:checked ~ .logo{
     display: flex;
+    }
+
+    @keyframes nav-vyjizdi{
+      0%{
+        transform: translateX(200%);
+      }
+      100%{
+        transform: translateX(70%);
+      }
     }
