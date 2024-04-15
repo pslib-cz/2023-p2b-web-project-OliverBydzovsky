@@ -9,25 +9,19 @@
 </head>
 <body>
     <nav>
-        <div class="navbar">
-              <div class="container nav-container">
-                  <input class="checkbox" type="checkbox"/>
-                  <div class="hamburger-lines">
-                  <span class="line line1"></span>
-                  <span class="line line2"></span>
-                  <span class="line line3"></span>
-                  </div>  
-              <div class="logo">
-                  <input type="image" src="./image/Home/Logo_NoBackground.png" alt="Logo" style="float:left" width="55" height="70">
-                  <p class="name" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Alfa</p>
-              </div>
-              <div class="menu-items">
-                  <li class="menu_text"><a href="./Index.html">Home</a></li>
-                  <li class="menu_text"><a href="#">Galerie</a></li>
-                  <li class="menu_text"><a href="./Kontakty.html">Kontakty</a></li>
-              </div>
-              </div>
-        </div>
+        <label class="menu-nazev">Alfa</label>
+          <ul class="menu">
+              <li><a href="./Index.html">Home</a></li>
+              <li><a class="active" href="#">Galerie</a></li>
+              <li><a href="./Kontakt.html">Kontakt</a></li>
+          </ul>
+  
+          <label class="hamburger">
+              <input class="checkbox" type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+          </label> 
       </nav>
 <main>
     <div class="uvod">
@@ -65,7 +59,7 @@
     <div class="footer_text">
     <dl>
         <dt class="dt_footer_text">Zákaznická podpora: +185349267187</dt>
-        <dt class="dt_footer_text">Máte zájem? <a href="#">vyplňte formulář</a></dt>
+        <dt class="dt_footer_text">Máte zájem? <a href="./Kontakt.html">vyplňte formulář</a></dt>
         <dt class="dt_footer_text">Recenze naleznete <a href="#">zde</a></dt>
         <dt class="dt_footer_text">Galerie již prodaných produktů <a href="#">zde</a></dt>
     </dl>

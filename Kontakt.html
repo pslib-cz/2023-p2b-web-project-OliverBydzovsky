@@ -8,6 +8,61 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <nav>
+        <label class="menu-nazev">Alfa</label>
+          <ul class="menu">
+              <li><a href="./Index.html">Home</a></li>
+              <li><a href="./Galerie.html">Galerie</a></li>
+              <li><a class="active" href="#">Kontakt</a></li>
+          </ul>
+  
+          <label class="hamburger">
+              <input class="checkbox" type="checkbox" />
+              <span></span>
+              <span></span>
+              <span></span>
+          </label> 
+      </nav>
+
+      <main class="formular-main">
+        <div class="formular-div">
+            <h1 class="formular-h1">Kontaktní formulář</h1>
+
+            <form action="#">
+              <label for="fname">Jméno</label>
+              <input type="text" name="firstname" placeholder="Jan">
+          
+              <label for="lname">Příjmení</label>
+              <input type="text" name="lastname" placeholder="Novák">
+
+              <label for="email">Email</label>
+              <input type="text" name="email" placeholder="jan.novak@gmail.com">
+
+              <label for="country">Produkt(o který máte zájem)</label>
+              <select id="country" name="country">
+                <option class="moznost" value="usa">...</option>
+                <option class="moznost" value="australia">Agent s povolením zotročit</option>
+                <option class="moznost" value="canada">Mírotvůrce</option>
+                <option class="moznost" value="usa">Dogo</option>
+                <option class="moznost" value="usa">Pojízdná krabice</option>
+                <option class="moznost" value="usa">Fake Batmobil</option>
+              </select>
+            
+              <input class="formular-odeslat" type="submit" value="Odeslat">
+            </form>
+          </div>
+      </main>
 </body>
+<footer>
+    <div class="footer_back">
+    <div class="footer_text">
+    <dl>
+        <dt class="dt_footer_text">Zákaznická podpora: <a href="tel:+185349267187">+185349267187</a></dt>
+        <dt class="dt_footer_text">Máte zájem? <a href="#">vyplňte formulář</a></dt>
+        <dt class="dt_footer_text">Recenze naleznete <a href="#">zde</a></dt>
+        <dt class="dt_footer_text">Galerie již prodaných produktů <a href="./Galerie.html">zde</a></dt>
+    </dl>
+    </div>
+    </div>
+    </footer> 
 </html>
