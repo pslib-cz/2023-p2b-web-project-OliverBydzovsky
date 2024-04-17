@@ -342,9 +342,15 @@ a.active, a:hover {
 
 .product-photo {
     border-radius: 30px;
+    transition: 1s;
 
 }
 
+.product-photo:hover {
+  transform: scale(1.1);
+  transition: 1s;
+  border-style: 2px solid;
+}
 
 .gallery {
   display: flex;
@@ -354,7 +360,7 @@ a.active, a:hover {
   margin-top: -13em;
 }
 
-.gallery-item {
+.gallery_item {
   display: flex;
   justify-content: center;
   margin: 10px;
@@ -362,6 +368,10 @@ a.active, a:hover {
   max-height: auto;
   border-radius: 20px;
   align-items: center;
+}
+
+.gallery_item_background {
+  border-radius: 20px;
 }
 
 .gallery-item img {
