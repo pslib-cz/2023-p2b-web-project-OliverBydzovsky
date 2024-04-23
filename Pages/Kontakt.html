@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/normalize.css">
     <link rel="stylesheet" href="../style/index_style.css">
+    <link rel="stylesheet" href="./icomoon/style.css">
     <title>Document</title>
 </head>
 <body>
     <nav>
-        <label class="menu-nazev">Alfa</label>
+        <label class="menu-nazev"><a href="../index.html">Alfa</a></label>
           <ul class="menu">
               <li><a href="../index.html">Home</a></li>
               <li><a href="./Galerie.html">Galerie</a></li>
@@ -17,7 +18,7 @@
           </ul>
   
           <label class="hamburger">
-              <input class="checkbox" type="checkbox" />
+              <input class="checkbox" type="checkbox">
               <span></span>
               <span></span>
               <span></span>
@@ -28,15 +29,15 @@
         <div class="formular-div">
             <h1 class="formular-h1">Kontaktní formulář</h1>
 
-            <form action="#">
+            <form action="../index.html">
               <label for="fname">Jméno</label>
-              <input type="text" name="firstname" placeholder="Jan">
+              <input type="text" id="fname" name="firstname" placeholder="Jan">
           
               <label for="lname">Příjmení</label>
-              <input type="text" name="lastname" placeholder="Novák">
+              <input type="text" id="lname" name="lastname" placeholder="Novák">
 
               <label for="email">Email</label>
-              <input type="text" name="email" placeholder="jan.novak@gmail.com">
+              <input type="text" id="email" name="email" placeholder="jan.novak@gmail.com">
 
               <label for="country">Produkt(o který máte zájem)</label>
               <select id="country" name="country">
@@ -46,23 +47,30 @@
                 <option class="moznost" value="usa">Dogo</option>
                 <option class="moznost" value="usa">Pojízdná krabice</option>
                 <option class="moznost" value="usa">Fake Batmobil</option>
+                <option class="moznost" value="usa">Baby dragon</option>
+                <option class="moznost" value="usa">Kitty</option>
+                <option class="moznost" value="usa">Rabbit woman</option>
+                <option class="moznost" value="usa">Návnada</option>
               </select>
             
               <input class="formular-odeslat" type="submit" value="Odeslat">
             </form>
           </div>
       </main>
+      <footer>
+        <div class="footer_back">
+            <div class="footer_text">
+                <p class="dt_footer_text">Zákaznická podpora: <a href="tel:+185349267187">+185349267187</a></p>
+                <p class="dt_footer_text">Recenze naleznete <a href="#">zde</a></p>
+                <p class="dt_footer_text">Galerie již prodaných produktů <a href="./Galerie.html">zde</a></p>
+            </div>
+            <div class="footer_icons">
+                <a href="#"><span class="icon-instagram"></span></a>
+                <a href="#"><span class="icon-phone"></span></a>
+                <a href="#"><span class="icon-facebook"></span></a>
+                <a href="#"><span class="icon-youtube"></span></a>
+            </div>
+        </div>
+        </footer>
 </body>
-<footer>
-    <div class="footer_back">
-    <div class="footer_text">
-    <dl>
-        <dt class="dt_footer_text">Zákaznická podpora: <a href="tel:+185349267187">+185349267187</a></dt>
-        <dt class="dt_footer_text">Máte zájem? <a href="#">vyplňte formulář</a></dt>
-        <dt class="dt_footer_text">Recenze naleznete <a href="#">zde</a></dt>
-        <dt class="dt_footer_text">Galerie již prodaných produktů <a href="./Galerie.html">zde</a></dt>
-    </dl>
-    </div>
-    </div>
-    </footer> 
 </html>

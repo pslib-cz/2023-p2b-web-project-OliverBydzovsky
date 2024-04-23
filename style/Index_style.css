@@ -22,6 +22,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--line);
+  z-index: 5;
 }
 
 nav:has(.checkbox:checked) .hamburger span:nth-of-type(1) {
@@ -38,20 +39,24 @@ nav:has(.checkbox:checked) .hamburger span:nth-of-type(3) {
 
 .menu {
   display: none;
+  width: 200px;
 }
 
 nav:has(.checkbox:checked) .menu {
   display: flex;
+  position: absolute;
+  left: calc(50% - 100px);
+  top: 80px;
   flex-direction: column;
   align-items: center;
-  background-color: #000000d0;
+  background-color: #000000e7;
   border-radius: 20px;
+  z-index: 5;
   justify-content: center;
-  transform: translateX(-150px);
-  transform: translateY(150px);
+  /* margin-left: -50%; */
+  /* transform: translateX(50%) translateY(50%); */
   animation: menu-fall-down 1s ease;
 }
-
 
 
 
@@ -78,10 +83,11 @@ nav:has(.checkbox:checked) .menu {
 
   .menu {
     display: block;
+    width: initial;
   }
 
   nav:has(.checkbox:checked) .hamburger span:nth-of-type(1) {
-    transform: translateY(200%) rotate(45deg);
+    transform: translateY(200%) rotate(405deg);
   }
 
   nav:has(.checkbox:checked) .hamburger span:nth-of-type(2) {
@@ -89,7 +95,7 @@ nav:has(.checkbox:checked) .menu {
   }
 
   nav:has(.checkbox:checked) .hamburger span:nth-of-type(3) {
-    transform: translateY(-200%) rotate(-45deg);
+    transform: translateY(-200%) rotate(-405deg);
   }
 }
   
@@ -102,6 +108,7 @@ nav:has(.checkbox:checked) .menu {
 
 input[type=text], select {
   width: 100%;
+  height: 3.5em;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -112,8 +119,10 @@ input[type=text], select {
 
 input[type=submit] {
   width: 100%;
+  height: 3.5em;
   background-color: hsl(195, 73%, 36%);
   color: white;
+  font-size: large;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -134,7 +143,10 @@ input[type=submit]:hover {
   background-color: #c27638;
   padding: 20px;
   width: 80%;
-  
+  height: 39em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 
@@ -148,6 +160,7 @@ input[type=submit]:hover {
 .formular-h1 {
   margin-top: -3px;
   text-align: center;
+  font-size: 2.5em;
 }
 
 
@@ -201,6 +214,12 @@ nav ul li a {
   padding: 7px 13px;
   text-transform: uppercase;
 }
+
+a.active {
+  background-color: white;
+
+}
+
 a.active, a:hover {
   color: rgb(0, 0, 0);
   text-decoration: none;
@@ -248,6 +267,7 @@ a.active, a:hover {
   position: absolute;
   margin-top: 3em;
   text-align: center;
+  width: 100%;
 
 }
 
@@ -257,13 +277,22 @@ a.active, a:hover {
   font-weight: 700;
   margin: auto;
   text-align: center;
-  background-color: none;
 
+}
+
+.menu-nazev a{
+  color: white;
+  text-decoration: none;
 }
 
 .background_img {
     background-position: center;
     align-items: center;
+    width: 100%;
+    height: 400px;
+    float: none;
+    width: 100%;
+    height: 400px;
 }
 
 
@@ -319,7 +348,9 @@ a.active, a:hover {
 }
 
 .button_home {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: cursive;
   font-weight: 500;
   background-color: white; 
@@ -328,7 +359,7 @@ a.active, a:hover {
   border-radius: 13px;
   width: 16em;
   height: 3em;
-  margin-top: 2.2em;
+  margin-top: 1.2em;
 }
 
 .button_home:hover {
@@ -339,6 +370,9 @@ a.active, a:hover {
 .product-photo {
     border-radius: 30px;
     transition: 1s;
+    float: none;
+    width: 100%;
+    height: 70%;
 
 }
 
@@ -360,7 +394,7 @@ a.active, a:hover {
   display: flex;
   justify-content: center;
   margin: 10px;
-  max-width: 300px;
+  max-width: 400px;
   max-height: auto;
   border-radius: 20px;
   align-items: center;
@@ -383,6 +417,7 @@ a.active, a:hover {
 .footer_icons {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 1em
 }
 
@@ -398,6 +433,8 @@ a.active, a:hover {
   }
   
   .footer_text{
+  display: flex;
+  flex-direction: column;
   width:100%;
   margin:.3em;
   padding: 0.6% 0%;
